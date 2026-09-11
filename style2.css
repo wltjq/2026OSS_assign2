@@ -6,7 +6,7 @@
 .title h1 {
     margin: 0px;
     color: #4CAF50;
-    font-size : 40px;
+    font-size: 40px;
 }
 
 .title p {
@@ -23,20 +23,20 @@
 
 .menubar {
     list-style: none;
-    display: flex;
-    width: 100%;
     padding: 0px;
-    margin: 0px;
+    margin: 0px 0px 15px 0px;
+    overflow: hidden;   /* float clearfix: 자식이 float되면 부모 높이가 0이 되는 걸 방지 */
 }
 
 .menuitem {
     background-color: #555555;
     color: #ffffff;
-    flex: 1;
+    float: left;
+    width: 160px;
+    box-sizing: border-box;
     text-align: center;
-    padding: 5px 0px;
     cursor: pointer;
-    margin: 0px 5px;
+    margin: 5px 5px;
 }
 
 .menuitem:nth-child(3) {
@@ -46,11 +46,12 @@
 
 .main {
     padding: 10px;
+    clear: both;   /* 위에서 float된 메뉴 영향이 아래 section까지 넘어오지 않게 끊어줌 */
 }
 
 .main h1,
 .main h2 {
-    margin : 0px;
+    margin: 0px;
     color: #4CAF50;
 }
 
@@ -73,5 +74,4 @@
 
 a {
     color: black;
-    
 }
